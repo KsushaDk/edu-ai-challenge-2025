@@ -1,0 +1,27 @@
+You will be given a block of text. Your task is to:
+
+1. Generate a concise summary that captures the main points of the input text. 
+2. Perform sentiment analysis on the entire text and: 
+   - Classify the sentiment as Positive, Neutral, or Negative. 
+   - Assign a sentiment score as follows: 
+     - +1 for very positive
+     - 0 for neutral
+     - -1 for very negative
+3. Return the results in the following structured JSON format: 
+
+{
+  "summary": "...",
+  "sentiment": "...",
+  "sentiment_score": ...,
+  "metadata": {
+     include here  any relevant metadata you deem useful
+  }
+}
+
+Here is the text for analysis:
+
+Remote work, also known as telecommuting, has become increasingly popular in recent years, particularly after the global pandemic forced many companies to adapt to flexible working arrangements. The advantages of remote work are numerous. Employees often report higher job satisfaction due to the elimination of long commutes, increased flexibility in managing work-life balance, and the ability to work from the comfort of their homes. For companies, remote work can lead to lower operational costs, since there is less need for office space and associated expenses.
+
+However, remote work is not without its challenges. Many employees struggle with feelings of isolation and a lack of connection to their colleagues, which can negatively impact collaboration and team dynamics. Moreover, some workers find it difficult to maintain productivity due to distractions at home or the blurred boundaries between personal and professional life. Employers, on the other hand, may face difficulties in monitoring employee performance and ensuring consistent communication across teams.
+
+Despite these challenges, remote work is likely here to stay. Companies are exploring hybrid models that combine the benefits of in-office collaboration with the flexibility of remote work. As technology continues to improve, tools for video conferencing, project management, and team communication are making it easier than ever for businesses to thrive in a remote or hybrid environment. 
