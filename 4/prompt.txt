@@ -1,0 +1,41 @@
+ I am providing a JavaScript function named `processUserData` and I want you to review it from three distinct expert perspectives - 
+ an Experienced Developer,  a Security Engineer,  a Performance Specialist. 
+
+Here is the function:  
+function processUserData(data: any) {
+  var users = [];
+
+  for (var i = 0; i < data.length; i++) {
+    var user = {
+      id: data[i].id,
+      name: data[i].name,
+      email: data[i].email,
+      active: data[i].status === 'active' ? true : false
+    };
+    users.push(user);
+  }
+  console.log("Processed " + users.length + " users");
+  return users;
+}
+
+function saveToDatabase(users) {
+  //TODO: Implement database connection
+  var success = true;
+  return success;
+}
+
+Analyze this code snippet from the following three perspectives:
+
+1. Experienced Developer:
+- Focus on code clarity, maintainability, idiomatic usage of the language, and clean design.
+- Suggest improvements or refactors that enhance readability or code quality.
+
+2. Security Engineer:
+- Identify any potential vulnerabilities in the code (e.g., unsafe input handling, insecure logging).
+- Suggest how to make the code more secure and robust against common threats.
+
+3. Performance Specialist:
+- Evaluate the code’s efficiency and memory usage.
+- Suggest optimizations to improve runtime performance and scalability.
+
+For each role list your observations and then provide specific and actionable recommendations for improvement.
