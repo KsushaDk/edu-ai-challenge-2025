@@ -187,27 +187,31 @@ class GameBoard {
         // Find if any ship occupies the target location
         const targetedShip = this._findShipAtLocation(targetLocation);
 
-        if (targetedShip && targetedShip.receiveAttackAt(targetLocation)) {
-            this.gameGrid[row][column] = 'X';
-            const isDestroyed = targetedShip.isCompletelyDestroyed();
+        if (targetedShip) {
+            if (targetedShip.isLocationDamaged(targetLocation)) {
+                this.gameGrid[row][column] = 'X';
+                return this._createAttackResult(
+                    'already_hit',
+                    true,
+                    false,
+                    'You already hit that spot!'
+                );
+            }
 
-            return this._createAttackResult(
-                'hit',
-                true,
-                isDestroyed,
-                isDestroyed ? 'You sunk a battleship!' : 'HIT!'
-            );
-        } else if (targetedShip && targetedShip.isLocationDamaged(targetLocation)) {
-            return this._createAttackResult(
-                'already_hit',
-                true,
-                false,
-                'You already hit that spot!'
-            );
-        } else {
-            this.gameGrid[row][column] = 'O';
-            return this._createAttackResult('miss', false, false, 'MISS.');
+            if (targetedShip.receiveAttackAt(targetLocation)) {
+                this.gameGrid[row][column] = 'X';
+                const isDestroyed = targetedShip.isCompletelyDestroyed();
+                return this._createAttackResult(
+                    'hit',
+                    true,
+                    isDestroyed,
+                    isDestroyed ? 'You sunk a battleship!' : 'HIT!'
+                );
+            }
         }
+
+        this.gameGrid[row][column] = 'O';
+        return this._createAttackResult('miss', false, false, 'MISS.');
     }
 
     /**

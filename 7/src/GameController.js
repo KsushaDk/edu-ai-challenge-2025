@@ -100,6 +100,9 @@ class GameController {
             // Let the current player process the attack result
             this.currentPlayer.processAttackResult(attackLocation, attackResult);
 
+            // Display updated game boards
+            this.display.printGameBoards();
+
             // If it's a hit, the player gets another turn
             if (attackResult.hit && !this.checkGameEnd()) {
                 // Don't switch players, same player goes again
