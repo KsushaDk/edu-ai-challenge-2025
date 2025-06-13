@@ -1,0 +1,159 @@
+TypeScript Validation Library Test Report
+=====================================
+
+Test Summary
+-----------
+Test Suites: 1 passed, 1 total
+Tests:       51 passed, 51 total
+Snapshots:   0 total
+
+Coverage Summary
+---------------
+Overall Coverage:
+- Statements: 96.15%
+- Branches:   87.50%
+- Functions:  88.37%
+- Lines:      96.53%
+
+Raw Coverage Table (Jest Output)
+------------------------------
+File            | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s
+----------------|---------|----------|---------|---------|------------------
+All files       |   96.15 |    87.50 |   88.37 |   96.53 |                  
+ src            |     100 |      100 |      50 |     100 |                  
+  schema.ts     |     100 |      100 |      50 |     100 |                  
+ src/validators |   95.62 |    87.50 |   94.59 |    96.1 |                  
+  array.ts      |     100 |    85.71 |     100 |     100 | 60               
+  base.ts       |     100 |      100 |     100 |     100 |                  
+  boolean.ts    |   82.35 |      100 |   77.77 |   84.61 | 37-41            
+  date.ts       |     100 |      100 |     100 |     100 |                  
+  number.ts     |     100 |      100 |     100 |     100 |                  
+  object.ts     |    92.3 |    70.58 |     100 |      92 | 33,42            
+  string.ts     |   89.28 |      100 |    87.5 |    90.9 | 37-41            
+
+Coverage by File
+---------------
+1. src/schema.ts
+   - Statements: 100%
+   - Branches:   100%
+   - Functions:  50%
+   - Lines:      100%
+   - Uncovered Lines: None
+
+2. src/validators/array.ts
+   - Statements: 100%
+   - Branches:   85.71%
+   - Functions:  100%
+   - Lines:      100%
+   - Uncovered Lines: 60
+
+3. src/validators/base.ts
+   - Statements: 100%
+   - Branches:   100%
+   - Functions:  100%
+   - Lines:      100%
+   - Uncovered Lines: None
+
+4. src/validators/boolean.ts
+   - Statements: 82.35%
+   - Branches:   100%
+   - Functions:  77.77%
+   - Lines:      84.61%
+   - Uncovered Lines: 37-41
+
+5. src/validators/date.ts
+   - Statements: 100%
+   - Branches:   100%
+   - Functions:  100%
+   - Lines:      100%
+   - Uncovered Lines: None
+
+6. src/validators/number.ts
+   - Statements: 100%
+   - Branches:   100%
+   - Functions:  100%
+   - Lines:      100%
+   - Uncovered Lines: None
+
+7. src/validators/object.ts
+   - Statements: 92.3%
+   - Branches:   70.58%
+   - Functions:  100%
+   - Lines:      92%
+   - Uncovered Lines: 33, 42
+
+8. src/validators/string.ts
+   - Statements: 89.28%
+   - Branches:   100%
+   - Functions:  87.5%
+   - Lines:      90.9%
+   - Uncovered Lines: 37-41
+
+Test Cases Summary
+-----------------
+1. Valid Data Scenarios
+   - Complete valid user data
+   - Data with optional fields
+   - Minimum valid data
+
+2. Invalid Data Scenarios
+   - Invalid ID type
+   - Invalid name length
+   - Invalid email format
+   - Invalid postal code
+   - Invalid array items
+   - Missing required fields
+   - Multiple validation errors
+
+3. String Validator Tests
+   - String length constraints
+   - Pattern matching
+   - Email format
+   - URL format
+   - Alphanumeric strings
+   - Predefined values
+
+4. Number Validator Tests
+   - Number constraints
+   - Optional numbers
+   - Positive/negative numbers
+   - Integer validation
+   - Range validation
+
+5. Array Validator Tests
+   - Array item validation
+   - Array length validation
+   - Exact length validation
+   - Nested arrays
+
+6. Boolean Validator Tests
+   - Basic boolean validation
+   - Required boolean values
+   - Optional boolean values
+   - True-only validation
+   - False-only validation
+
+7. Object Validator Tests
+   - Nested object validation
+   - Optional fields
+   - Cross-field validation
+   - Circular references
+
+8. Date Validator Tests
+   - Basic date type validation
+   - Before/after date validation
+   - Past/future date validation
+   - Date range validation
+   - Date format validation
+   - Optional date handling
+   - Combined validations
+   - Custom error messages
+   - Fixed timestamp testing
+   - Invalid date handling
+
+9. Edge Cases and Error Handling
+   - Undefined values
+   - Null values
+   - Invalid types
+   - Deeply nested structures
+   - Mixed validators
