@@ -1,0 +1,15 @@
+Given the following input, generate a markdown-formatted report with the following sections:
+
+1. Brief History: Founding year, milestones, etc.
+2. Target Audience: Primary user segments
+3. Core Features: Top 2–4 key functionalities
+4. Unique Selling Points: Key differentiators
+5. Business Model: How the service makes money
+6. Tech Stack Insights: Any hints about technologies used
+7. Perceived Strengths: Mentioned positives or standout features
+8. Perceived Weaknesses: Cited drawbacks or limitations
+
+Input:
+{{INPUT}}
+
+Output:

@@ -1,0 +1,13 @@
+{
+    "name": "service-analyzer",
+    "version": "1.0.0",
+    "description": "Console app using OpenAI API to analyze services",
+    "main": "index.js",
+    "scripts": {
+        "start": "node index.js"
+    },
+    "dependencies": {
+        "dotenv": "^16.3.1",
+        "openai": "^4.33.0"
+    }
+}
